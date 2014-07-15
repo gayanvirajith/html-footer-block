@@ -1,4 +1,4 @@
-# Footer block
+# Html footer block
 
 A simple responsive footer block. 
 
