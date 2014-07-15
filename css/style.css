@@ -43,3 +43,66 @@ Footer block
   color: #999999;
   padding: 20px 0;
   height: 100%; }
+  .footer-section h4 {
+    position: relative;
+    padding: 20px 0;
+    text-transform: uppercase; }
+  .footer-section h4.title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2rem;
+    height: 2px;
+    background: #1abc9c;
+    overflow: hidden; }
+  .footer-section address, .footer-section p {
+    font-size: 13px;
+    line-height: 1.5; }
+  .footer-section .column {
+    float: left;
+    width: 30%;
+    float: left; }
+  .footer-section p.copyright {
+    @inclue clearfix;
+    width: 100%;
+    font-size: 11px;
+    padding-top: 20px; }
+  .footer-section a {
+    border-bottom: 1px solid rgba(198, 70, 61, 0);
+    text-decoration: none;
+    color: #999999;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  .footer-section a:hover {
+    border-bottom: 1px solid #999999; }
+  .footer-section ul.list-inline {
+    padding-top: 10px;
+    font-size: 11px;
+    display: inline-block;
+    /* the key bit */
+    *display: inline;
+    /* IE7 hack */
+    *zoom: 1;
+    /* IE7 hack */
+    position: relative; }
+    .footer-section ul.list-inline li {
+      dispay: inline;
+      float: left;
+      margin-left: 5px; }
+    .footer-section ul.list-inline li:after {
+      content: '';
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      background: #efefef;
+      border-radius: 50%;
+      margin-left: 2px; }
+    .footer-section ul.list-inline li:last-child:after {
+      content: "";
+      width: 0;
+      height: 0; }
+    .footer-section ul.list-inline li:first-child {
+      margin-left: 0; }

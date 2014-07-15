@@ -57,5 +57,78 @@ Footer block
     background-color: $color-2;
     color: $color-1;
     padding: 20px 0;
-    height:100%;    
+    height:100%;   
+    h4 {
+        position: relative;
+        padding: 20px 0;
+        text-transform: uppercase;
+    }
+    h4.title::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 2rem;
+        height: 2px;
+        background: $color-3;
+        overflow: hidden;
+    } 
+
+    address,p { font-size: 13px;line-height: 1.5;}
+
+    .column {
+        float:left;
+        @include column(.3);
+    }
+
+    p.copyright {
+        @inclue clearfix;
+        width:100%;
+        font-size: 11px;
+        padding-top: 20px;
+    }
+
+    a {
+        border-bottom: 1px solid rgba(198, 70, 61, 0);
+        text-decoration: none;
+        color: $color-1;
+        @include transition(all 0.2s);
+    }
+    
+    a:hover {
+        border-bottom: 1px solid $color-1;
+    }
+
+    ul.list-inline {
+        padding-top: 10px;
+        font-size: 11px;
+        display: inline-block;
+        /* the key bit */
+        *display: inline;
+        /* IE7 hack */
+        *zoom: 1;
+        /* IE7 hack */
+        position: relative;
+        li {
+            dispay:inline;
+            float: left;            
+            margin-left: 5px;
+        }
+        li:after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: inline-block;
+            background: $color-4;
+            border-radius: 50%;
+            margin-left: 2px;
+        }
+        li:last-child:after {
+            content: "";
+            width: 0;
+            height: 0;
+        }
+        li:first-child {
+            margin-left: 0;
+        }
+    }
 }
