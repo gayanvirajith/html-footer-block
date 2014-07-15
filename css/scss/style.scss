@@ -1,0 +1,61 @@
+@import 'bourbon/bourbon'; // http://bourbon.io/
+
+@import '../partials/variables'; // colors, fonts etc...
+
+@import '../partials/mixins'; // custom mixins
+
+@import '../partials/layout'; // responsive grid and media queries
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+    @include box-sizing(border-box);
+}
+
+body {
+    font: {
+        size: 100%;
+        family: $primary-font; // variables inside partials > _variables.scss
+    }
+    color: $color-black;
+    background-color: $color-white;
+}
+
+/* -------------------------------- 
+
+Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.co
+
+-------------------------------- */
+
+.wc-container { 
+    width: 90%;
+    max-width: $screen-lg; // breakpoints inside partials > _layout.scss
+    margin: 0 auto;
+
+    &::after { /* clearfix */
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+/* -------------------------------
+
+Footer block
+
+------------------------------- */
+.footer-section {
+    background-color: $color-2;
+    color: $color-1;
+    padding: 20px 0;
+    height:100%;    
+}

@@ -1,6 +1,6 @@
 # Footer block
 
-A simple html footer block. 
+A simple responsive footer block. 
 
-[Demo](http://webcreate.lk/footer-block)
+[Demo](http://gayanvirajith.github.io/html-footer-block)
 
