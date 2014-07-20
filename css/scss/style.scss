@@ -32,6 +32,21 @@ body {
 
 /* -------------------------------- 
 
+Modules - replace text with background image thanks to https://github.com/CodyHouse, codyhouse.co
+
+-------------------------------- */
+
+.wc-img-replace { /* replace text with a background-image */
+	display: inline-block;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* -------------------------------- 
+
 Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.co
 
 -------------------------------- */
@@ -73,11 +88,24 @@ Footer block
         overflow: hidden;
     } 
 
-    address,p { font-size: 13px;line-height: 1.5;}
+    address,p { font-size: 13px;line-height: 1.7;}
 
     .column {
         float:left;
         @include column(.3);
+
+        @include MQ(XS) {
+            &:nth-child(1) {
+                @include column(.5);
+            }
+            &:nth-child(2) {
+                @include column(.5)
+            }
+            &:nth-child(3) {
+                margin-top: 20px;
+                @include column(1);
+            }
+        }
     }
 
     p.copyright {
@@ -131,4 +159,63 @@ Footer block
             margin-left: 0;
         }
     }
+
+    ul.social-media {
+        text-align:left;
+        li { display:inline-block;}
+        li > a {
+            width: 32px;
+            height: 32px;
+            background-color: rgba(239, 239, 239, 0);
+            background-image: url("./images/socials-icons.svg");
+            background-size: 224px 64px;
+            border-radius: 0.25em;
+            @include transition(background-color 0.2s);
+        }
+        
+        li a.twitter {
+            background-position: 0 0;
+            &:hover {
+                background-position: 0 -32px;
+                background-color: $color-3;
+            } 
+        }
+
+        li a.github {
+            background-position: -32px 0;
+            &:hover {
+                background-position: -32px -32px;
+                background-color: $color-3;
+            }
+        }
+        li a.facebook {
+            background-position: -64px 0;
+            &:hover {
+                background-position: -64px -32px;
+                background-color: $color-3
+            }
+        }
+        li a.dribble {
+            background-position: -96px 0;
+            &:hover {
+                background-position: -96px -32px;
+                background-color: $color-3
+            }
+        }
+        li a.google {
+            background-position: -128px 0;
+            &:hover {
+                background-position: -128px -32px;
+                background-color: $color-3
+            }
+        }
+        li a.pinterest {
+            background-position: -196px 0;
+            &:hover {
+                background-position: -196px -32px;
+                background-color: $color-3
+            }
+        }
+    }
+    
 }
