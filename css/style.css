@@ -39,7 +39,7 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
 -------------------------------- */
 .wc-container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 992px;
   margin: 0 auto; }
   .wc-container::after {
     /* clearfix */

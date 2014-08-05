@@ -53,7 +53,7 @@ Modules - reusable container thanks to https://github.com/CodyHouse, codyhouse.c
 
 .wc-container { 
     width: 90%;
-    max-width: $screen-lg; // breakpoints inside partials > _layout.scss
+    max-width: $screen-md; // breakpoints inside partials > _layout.scss
     margin: 0 auto;
 
     &::after { /* clearfix */
